@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Watcher_gui.jnlp">
+  <information>
+    <title>Watcher_gui</title>
+    <vendor>Oldøich</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Watcher_gui.jar" size="5815" download="eager" />
+    <jar href="lib\AbsoluteLayout.jar" size="2847" download="eager" />
+    <jar href="lib\Helper.jar" size="163297" download="eager" />
+    <jar href="lib\beansbinding-1.2.1.jar" size="631281" download="eager" />
+    <jar href="lib\faceppsdk.jar" size="458259" download="eager" />
+    <jar href="lib\jsoup-1.7.3-javadoc.jar" size="538485" download="eager" />
+    <jar href="lib\jsoup-1.7.3-sources.jar" size="122595" download="eager" />
+    <jar href="lib\jsoup-1.7.3.jar" size="297387" download="eager" />
+    <jar href="lib\objectdb.jar" size="1434720" download="eager" />
+    <jar href="lib\swing-layout-1.0.4.jar" size="117412" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Watcher_gui" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="watcher_gui.Testfxml"  name="Watcher_gui" />
+  <update check="always"/>
+</jnlp>

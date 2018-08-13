@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane fx:id="spnlPanel" dividerPositions="0.17398648648648649, 0.9459459459459459, 0.5" focusTraversable="true" minHeight="594.0" minWidth="595.0" orientation="VERTICAL" pickOnBounds="false" prefHeight="594.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="watcher_gui.FXMLController">
+  <items>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+    <AnchorPane id="h" fx:id="horniPanel" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: gray;">
+      <children>
+        <Button fx:id="btnNovy" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefWidth="104.00009999999747" text="Nový záznam" />
+        <Button fx:id="btnSmazat" layoutX="14.0" layoutY="65.0" mnemonicParsing="false" prefWidth="105.0" text="Smazat vybraný" />
+        <Separator layoutX="119.0" minWidth="2.0" orientation="VERTICAL" prefHeight="100.0" prefWidth="20.0" />
+        <CheckBox fx:id="chbDnes" layoutX="139.0" layoutY="17.0" mnemonicParsing="false" text="Použít dnešní datum" />
+            <DatePicker fx:id="dtpDatum" layoutX="139.0" layoutY="65.0" prefHeight="25.0" prefWidth="130.0" showWeekNumbers="true" />
+            <Separator layoutX="269.0" minWidth="2.0" orientation="VERTICAL" prefHeight="100.0" prefWidth="20.0" />
+            <Button fx:id="btnDilPlus" layoutX="289.0" layoutY="14.0" mnemonicParsing="false" onAction="#dilPlus" text="Díl +1" />
+            <Button fx:id="btnDilMinus" layoutX="289.0" layoutY="61.0" mnemonicParsing="false" onAction="#dilMinus" prefHeight="25.0" prefWidth="49.0" text="Díl -1" />
+            <Button fx:id="btnSeriePlus" layoutX="348.0" layoutY="14.0" mnemonicParsing="false" onAction="#seriePlus" text="Série +1" AnchorPane.leftAnchor="348.0" />
+            <Button fx:id="btnSerieMinus" layoutX="348.0" layoutY="61.0" mnemonicParsing="false" onAction="#serieMinus" prefHeight="25.0" prefWidth="60.0" text="Série -1" />
+      </children>
+    </AnchorPane>
+    <AnchorPane fx:id="dolniPanel" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="593.0">
+      <children>
+        <TableView fx:id="tblTabulka" disable="false" editable="true" mouseTransparent="false" pickOnBounds="true" prefHeight="443.0" prefWidth="688.0" tableMenuButtonVisible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+          <columns>
+            <TableColumn prefWidth="75.0" text="Column X" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+          </columns>
+        </TableView>
+      </children>
+    </AnchorPane>
+      <SplitPane dividerPositions="0.5" prefHeight="13.0" prefWidth="593.0" SplitPane.resizableWithParent="false">
+         <items>
+            <TextField />
+            <Button mnemonicParsing="false" text="Button" />
+         </items>
+      </SplitPane>
+  </items>
+</SplitPane>
